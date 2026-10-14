@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AURA PayPilot AI — smarter payment insights and financial assistance.">
+  <title>AURA PayPilot AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-icon">A</span> AURA <span class="brand-light">PayPilot AI</span></a>
+    <span class="sandbox-badge">● DEMO MODE</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">YOUR AI PAYMENT COMPANION</p>
+      <h1>Payments, made <span>smarter.</span></h1>
+      <p class="hero-copy">Explore payment insights, understand transactions, and plan your next move with an AI-powered financial companion.</p>
+      <div class="hero-actions">
+        <a class="primary-btn" href="#assistant">Try AI Assistant ↗</a>
+        <a class="secondary-btn" href="#payments">Explore demo</a>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Demo overview">
+      <article class="stat-card">
+        <span class="stat-label">Workspace</span>
+        <h2>PayPilot</h2>
+        <p>Personal payment companion</p>
+      </article>
+      <article class="stat-card">
+        <span class="stat-label">Payment environment</span>
+        <h2>Sandbox</h2>
+        <p>Test mode only · No real charges</p>
+      </article>
+      <article class="stat-card">
+        <span class="stat-label">AI assistant</span>
+        <h2 id="assistantStatus">Demo ready</h2>
+        <p>Sample responses, no API connected yet</p>
+      </article>
+    </section>
+
+    <section class="workspace" id="assistant">
+      <div class="panel assistant-panel">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">AURA INTELLIGENCE</p>
+            <h2>Ask PayPilot</h2>
+          </div>
+          <span class="online-dot">● Demo</span>
+        </div>
+        <p class="muted">Ask a question about payment safety, budgeting, or PayPal Sandbox testing.</p>
+
+        <div class="suggestions">
+          <button class="suggestion" data-question="How can I make online payments safer?">Payment safety</button>
+          <button class="suggestion" data-question="How can I plan a monthly budget?">Budget planning</button>
+          <button class="suggestion" data-question="How does PayPal Sandbox work?">PayPal Sandbox</button>
+        </div>
+
+        <div class="chat-window" id="chatWindow" aria-live="polite">
+          <div class="message assistant-message">
+            Welcome to AURA PayPilot AI! I'm running in demo mode. Choose a suggested question to explore the prototype.
+          </div>
+        </div>
+
+        <form id="chatForm" class="chat-form">
+          <label class="sr-only" for="questionInput">Ask a question</label>
+          <input id="questionInput" type="text" maxlength="300" placeholder="Ask about payments or budgeting..." required>
+          <button class="send-btn" type="submit">Send ↗</button>
+        </form>
+        <p class="disclaimer">Prototype responses are illustrative, not personalized financial advice.</p>
+      </div>
+
+      <aside class="panel payment-panel" id="payments">
+        <p class="eyebrow">PAYMENT WORKSPACE</p>
+        <h2>Payment demo</h2>
+        <p class="muted">Preview a test payment flow. This button does not charge money or contact PayPal yet.</p>
+
+        <div class="payment-summary">
+          <span>Sample checkout</span>
+          <strong>$10.00 USD</strong>
+          <small>Demo amount · Not a real transaction</small>
+        </div>
+
+        <button class="primary-btn full-width" id="demoPaymentBtn">Preview test checkout</button>
+        <div class="notice" id="paymentNotice" role="status">
+          <strong>Sandbox integration pending</strong>
+          <p>Connect a backend and PayPal Sandbox credentials to process a genuine test checkout.</p>
+        </div>
+
+        <div class="security-note">
+          <span>◈</span>
+          <div><strong>Safety first</strong><p>Never place secret API keys in frontend code or a public repository.</p></div>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      <span>© 2026 AURA PayPilot AI</span>
+      <span>Hackathon prototype · Demo mode</span>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
